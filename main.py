@@ -46,6 +46,7 @@ async def dump_all_messages(channel):
 
     messages_id = list()
     for i, message in enumerate(all_messages):
+        print(message)
         if message['_'] == 'MessageService' and message['action']['_'] != 'MessageActionChannelMigrateFrom':
             messages_id.append(message['id'])
     return messages_id
