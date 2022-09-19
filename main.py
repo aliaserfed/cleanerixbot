@@ -73,8 +73,8 @@ async def dump_all_messages(channel):
 async def delete_message_service(message: Message):
     if message.from_user.id == 1616210594 and message.chat.id != message.from_user.id:
         await message.delete()
-        channel = await client.get_entity(-1001693301776)
-        # channel = await client.get_entity(-1001241670968)
+        # channel = await client.get_entity(-1001693301776)
+        channel = await client.get_entity(-1001241670968)
         # await dump_all_messages(channel)
         for message_id in await dump_all_messages(channel):
             await bot.delete_message(-1001241670968, message_id)
