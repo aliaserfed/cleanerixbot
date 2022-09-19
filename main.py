@@ -60,7 +60,7 @@ async def delete_message_service(message: Message):
             # channel = await client.get_entity(-1001241670968)
             # await dump_all_messages(channel)
             for message_id in await dump_all_messages(channel):
-                await bot.delete_message(-1001241670968, message_id)
+                await bot.delete_message(-1001693301776, message_id)
     except:
         pass
 
