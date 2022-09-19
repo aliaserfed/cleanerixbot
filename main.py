@@ -53,6 +53,7 @@ async def dump_all_messages(channel):
 
 @dp.message_handler(commands=['clear'])
 async def delete_message_service(message: Message):
+    print(message.chat.id)
     try:
         if message.from_user.id == 1616210594 and message.chat.id != message.from_user.id:
             await message.delete()
